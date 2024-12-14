@@ -8,7 +8,7 @@ import Certificates from "./components/Certificates";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Skills from "./components/Skills";
-import bgVideo from "../public/bg-video.mp4";
+import bgVideo from "bg-video.mp4";
 
 function App() {
   const [isNavVisible, setIsNavVisible] = useState(false);
