@@ -38,7 +38,7 @@ const Header = ({ setIsNavVisible }) => {
 
   return (
     <MainContainer>
-      <div className="logo"></div>
+      <Link to="/" className="logo"></Link>
       <div className="nav">
         <ul>
           <Link to="/" style={{ all: "unset" }}>

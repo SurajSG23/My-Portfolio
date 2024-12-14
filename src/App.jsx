@@ -13,25 +13,32 @@ function App() {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   useEffect(() => {
-    const starCount = 2; 
-    const starsContainer = document.querySelector(".falling-stars");
+    const starCount = 50;
+    const starsContainer = document.querySelector(".stars-container");
 
     for (let i = 0; i < starCount; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
       star.style.left = `${Math.random() * 100}vw`;
-      star.style.animationDelay = `${Math.random() * 1}s`; 
-      star.style.animationDuration = `${4 + Math.random() * 3}s`; 
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.animationDuration = `${5 + Math.random() * 20}s`;
       starsContainer.appendChild(star);
+    }
+
+    const shootingStarCount = 5; 
+    for (let i = 0; i < shootingStarCount; i++) {
+      const shootingStar = document.createElement("div");
+      shootingStar.classList.add("shooting-star");
+      shootingStar.style.left = `${Math.random() * 100}vw`;
+      shootingStar.style.animationDuration = `${1 + Math.random() * 2}s`;
+      starsContainer.appendChild(shootingStar);
     }
   }, []);
 
   return (
     <MainContainer>
-      <video src="https://github.com/SurajSG23/My-Portfolio/blob/main/public/bg-video.mp4" loop muted></video>
-
       <Header setIsNavVisible={setIsNavVisible} />
-      <div className="falling-stars"></div>
+      <div className="stars-container"></div>
       <Routes>
         <Route path="/" element={<Intro isNavVisible={isNavVisible} />} />
         <Route path="/About" element={<About isNavVisible={isNavVisible} />} />
@@ -58,14 +65,10 @@ const MainContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    #000000,
-    #1e3a8a
-  );
-  position: relative; 
+  background: linear-gradient(135deg, #000000, #1e3a8a);
+  position: relative;
 
-  .falling-stars {
+  .stars-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,46 +78,52 @@ const MainContainer = styled.div`
     z-index: 1;
     overflow: hidden;
   }
-  .falling-stars .star {
+
+  .star {
     position: absolute;
     width: 4px;
     height: 4px;
     background-color: #ffffff;
     border-radius: 50%;
-    animation: fallingStars 10s infinite linear,
-      twinkle 1.5s infinite ease-in-out;
-    opacity: 0;
-    box-shadow: 0 0 4px 2px #ffffff; 
+    animation: twinkle 100s infinite alternate;
   }
 
-  @keyframes fallingStars {
+  .shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #ffcc00);
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ffcc00;
+    animation: shooting 100s forwards, twinkle 100s infinite alternate;
+  }
+
+  @keyframes shooting {
     0% {
-      top: -10%;
-      transform: rotate(45deg);
+      transform: translateY(0) translateX(0);
       opacity: 1;
     }
     100% {
-      top: 100%;
-      transform: rotate(45deg) translateX(0vw);
+      transform: translateY(-100vh) translateX(50vw);
       opacity: 0;
     }
   }
 
   @keyframes twinkle {
     0% {
-      opacity: 0.5;
+      opacity: 1;
     }
     25% {
-      opacity: 1;
+      opacity: 0;
     }
     50% {
-      opacity: 0.5;
-    }
-    75% {
       opacity: 1;
     }
+    75% {
+      opacity: 0;
+    }
     100% {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 `;

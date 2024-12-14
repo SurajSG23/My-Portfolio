@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import styled from "styled-components";
-const Intro = ({isNavVisible}) => {
-  
+const Intro = ({ isNavVisible }) => {
   const [text] = useTypewriter({
     words: [
       "FrontEnd Development",
@@ -480,6 +479,14 @@ const MainContainer = styled.div`
     }
     .name-details {
       height: 15vh;
+    }
+  }
+  @media (max-width: 391px) {
+    .name-suraj {
+      font-size: 30px;
+    }
+    .words h1 {
+      font-size: 20px;
     }
   }
 `;
