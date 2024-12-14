@@ -1,7 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 import Header from "./components/Header";
-import Intro from "./components/Intro";
+import Intro from "./components/Intro.jsx";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Certificates from "./components/Certificates";
