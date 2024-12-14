@@ -8,6 +8,10 @@ import Certificates from "./components/Certificates";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Skills from "./components/Skills";
+<<<<<<< HEAD
+=======
+import bgVideo from "bg-video.mp4";
+>>>>>>> 476aa9851e39fe22298297b8313f7492b9376380
 
 function App() {
   const [isNavVisible, setIsNavVisible] = useState(false);
