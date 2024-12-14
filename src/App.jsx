@@ -8,16 +8,13 @@ import Certificates from "./components/Certificates";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Skills from "./components/Skills";
-import bgVideo from "../public/bg-video.mp4";
 
 function App() {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   return (
     <MainContainer>
-      <video id="video" loop autoPlay muted>
-        <source src={bgVideo} type="video/mp4" />
-      </video>
+      <video src="bg-video.mp4" loop muted></video>
       <Header setIsNavVisible={setIsNavVisible} />
       <Routes>
         <Route path="/" element={<Intro isNavVisible={isNavVisible} />} />
