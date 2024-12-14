@@ -28,6 +28,8 @@ function App() {
 
   return (
     <MainContainer>
+      <video src="https://github.com/SurajSG23/My-Portfolio/blob/main/public/bg-video.mp4" loop muted></video>
+
       <Header setIsNavVisible={setIsNavVisible} />
       <div className="falling-stars"></div>
       <Routes>
