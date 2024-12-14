@@ -14,7 +14,7 @@ function App() {
 
   return (
     <MainContainer>
-      <video src="bg-video.mp4" loop muted></video>
+      <video src="https://github.com/SurajSG23/My-Portfolio/blob/main/public/bg-video.mp4" loop muted></video>
       <Header setIsNavVisible={setIsNavVisible} />
       <Routes>
         <Route path="/" element={<Intro isNavVisible={isNavVisible} />} />
