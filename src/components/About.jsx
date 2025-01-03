@@ -37,7 +37,13 @@ const About = ({ isNavVisible }) => {
       <ScrollButton onClick={handleScrollToEducation}>
         <div className="arrow">
           <div>
-            <FaArrowCircleDown style={{display:'flex', justifyContent:'center', alignItems:'center'}}/>
+            <FaArrowCircleDown
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
           </div>
           <div>My Education</div>
         </div>
@@ -102,7 +108,7 @@ const ScrollButton = styled.button`
   text-align: center;
   animation: fadeIn 1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  
+
   .arrow {
     display: flex;
     justify-content: center;
@@ -123,7 +129,7 @@ const ScrollButton = styled.button`
       opacity: 1;
     }
   }
-  @media (max-width: 990px){
+  @media (max-width: 990px) {
     display: none;
   }
 `;

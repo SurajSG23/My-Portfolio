@@ -228,7 +228,7 @@ const MainContainer = styled.div`
   }
   .input,
   textarea {
-    margin: 1em 0 1em 0;
+    margin: 3em 0 1em 0;
     width: 28vw;
     position: relative;
   }
@@ -252,7 +252,7 @@ const MainContainer = styled.div`
     position: absolute;
     left: 0;
     color: #e8e8e8;
-    padding: 0.7em;
+    padding: 0.9em;
     margin-left: 0.1em;
     pointer-events: none;
     transition: all 0.5s ease;
@@ -333,8 +333,9 @@ const MainContainer = styled.div`
     width: 120px;
     height: 120px;
     outline: none;
-    border: none;
+    border: 4px solid blue ;
     background: white;
+    background-color: #5de4ff;
     border-radius: 120px 5px 5px 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -344,15 +345,16 @@ const MainContainer = styled.div`
   .instagram {
     margin-top: 1.5em;
     margin-left: 1.2em;
-    fill: #cc39a4;
+    fill: red;
   }
 
   .card2 {
     width: 120px;
     height: 120px;
     outline: none;
-    border: none;
     background: white;
+    background-color: #5de4ff;
+    border: 4px solid blue ;
     border-radius: 5px 120px 5px 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -362,15 +364,16 @@ const MainContainer = styled.div`
   .twitter {
     margin-top: 1.5em;
     margin-left: -0.9em;
-    fill: #03a9f4;
+    fill: blue;
   }
 
   .card3 {
     width: 120px;
     height: 120px;
     outline: none;
-    border: none;
+    border: 4px solid blue ;
     background: white;
+    background-color: #5de4ff;
     border-radius: 5px 5px 5px 120px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -386,8 +389,9 @@ const MainContainer = styled.div`
     width: 120px;
     height: 120px;
     outline: none;
-    border: none;
+    border: 4px solid blue ;
     background: white;
+    background-color: #5de4ff;
     border-radius: 5px 5px 120px 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -397,13 +401,14 @@ const MainContainer = styled.div`
   .discord {
     margin-top: -0.9em;
     margin-left: -1.2em;
-    fill: #8c9eff;
+    fill: #0051ff;
   }
 
   .card1:hover {
     cursor: pointer;
     scale: 1.1;
-    background-color: #cc39a4;
+    background-color: red;
+    border: 2px solid blue ;
     box-shadow: 1px 1px 0px #eeb1de, 2px 2px 0px #d365b6, 3px 3px 0px #d365b6,
       4px 4px 0px #d365b6, 5px 5px 0px #d365b6;
   }
