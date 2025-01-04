@@ -6,8 +6,9 @@ const Contact = ({ isNavVisible }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
-
+  const [msgSent, setMsgSent] = useState(true);
   const sendEmail = (e) => {
+    setMsgSent(false);
     e.preventDefault();
 
     const templateParams = {
@@ -17,7 +18,6 @@ const Contact = ({ isNavVisible }) => {
       message: msg,
     };
 
-
     emailjs
       .send(
         import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
@@ -26,13 +26,17 @@ const Contact = ({ isNavVisible }) => {
         import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
       )
       .then((response) => {
-        console.log("Thank you for reaching out!", response);
+        alert(
+          "Thank you for reaching out! I will get back to you soon.",
+          response
+        );
         setName("");
         setMsg("");
         setEmail("");
+        setMsgSent(true);
       })
       .catch((error) => {
-        console.log("FAILED...", error);
+        alert("FAILED...", error);
       });
   };
 
@@ -159,21 +163,25 @@ const Contact = ({ isNavVisible }) => {
               <button>
                 <div class="svg-wrapper-1">
                   <div class="svg-wrapper">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="24"
-                      height="24"
-                    >
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path
-                        fill="currentColor"
-                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                      ></path>
-                    </svg>
+                    {msgSent ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          fill="currentColor"
+                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                        ></path>
+                      </svg>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
-                <span>Send</span>
+                <span>{msgSent ? "Send" : "Sending..."}</span>
               </button>
             </div>
           </form>
