@@ -177,7 +177,7 @@ const Contact = ({ isNavVisible }) => {
                         ></path>
                       </svg>
                     ) : (
-                      ""
+                      <div class="loading-spinner"></div>
                     )}
                   </div>
                 </div>
@@ -364,6 +364,23 @@ const MainContainer = styled.div`
     background-color: #e8e8e8;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+  }
+  .loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid transparent;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   .form button:hover:before {
