@@ -462,6 +462,7 @@ const MainContainer = styled.div`
           left: -7px;
           & .points-content,
           & .points-content2 {
+
             padding: 5px 0;
             h3 {
               font-size: 13px;
@@ -478,13 +479,23 @@ const MainContainer = styled.div`
             left: 2vw;
             min-width: 40vw;
             border-radius: 10px;
-            height: 12vh;
+            height: auto;
           }
           & .points-content2 {
             left: -42vw;
+            width: 35vw;
           }
         }
       }
+    }
+  }
+  @media (max-height:715px){
+    .body{
+      position: absolute;
+      top: 100px;
+    }
+    .edu {
+      top: 90vh;
     }
   }
 `;

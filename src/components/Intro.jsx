@@ -489,4 +489,11 @@ const MainContainer = styled.div`
       font-size: 20px;
     }
   }
+
+  @media (max-height:690px){
+    .texts{
+      position: absolute;
+      bottom: -40px;
+    }
+  }
 `;
