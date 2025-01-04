@@ -47,7 +47,7 @@ function App() {
           element={<Skills isNavVisible={isNavVisible} />}
         />
         <Route
-          path="/Achievements"
+          path="/Certifications"
           element={<Certificates isNavVisible={isNavVisible} />}
         />
         <Route

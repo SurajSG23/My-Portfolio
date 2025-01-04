@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { RxCross2 } from "react-icons/rx";
 const Certificates = ({ isNavVisible }) => {
+  const [selectedCertificate, setSelectedCertificate] = useState(false);
+  const previewCertificate = () => {
+    setSelectedCertificate(!selectedCertificate);
+  };
+
   const certificates = [
     {
       title: "Suraj",
@@ -67,11 +73,19 @@ const Certificates = ({ isNavVisible }) => {
               <div className="card__content">
                 <h3 className="card__title">{certificate.title}</h3>
                 <p className="card__description">{certificate.description}</p>
-                <button>Preview</button>
+                <button onClick={previewCertificate}>Preview</button>
               </div>
             </div>
           );
         })}
+        <div
+          className="preview"
+          style={{ visibility: selectedCertificate ? "visible" : "hidden" }}
+        >
+          <div style={{position:"absolute", right:"0", padding:"10px"}}>
+            <RxCross2  style={{fontSize:"25px", cursor:"pointer"}} onClick={previewCertificate}/>
+          </div>
+        </div>
       </div>
     </MainContainer>
   );
@@ -90,8 +104,15 @@ const MainContainer = styled.div`
   border: 1px solid rgba(200, 123, 255, 0.1);
   border-radius: 10px;
   z-index: ${({ isNavVisible }) => (isNavVisible ? "-1" : "1")};
-  .cert-cont{
-   
+
+  .preview {
+    width: 70vw;
+    height: 80vh;
+    background-color: #f2f2f2;
+    position: absolute;
+    border-radius: 10px;
+  }
+  .cert-cont {
     width: 85vw;
     height: 100%;
     display: flex;
