@@ -141,7 +141,7 @@ const Contact = ({ isNavVisible }) => {
               <input
                 autoComplete="off"
                 name="email"
-                type="email"
+                type="text"
                 required
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
