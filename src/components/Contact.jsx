@@ -1,6 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import emailjs from "@emailjs/browser";
+
 const Contact = ({ isNavVisible }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      to_name: "Suraj S G",
+      from_name: name,
+      from_email: email,
+      message: msg,
+    };
+
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
+      )
+      .then((response) => {
+        console.log("Thank you for reaching out!", response);
+        setName("");
+        setMsg("");
+        setEmail("");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+      });
+  };
+
   return (
     <MainContainer isNavVisible={isNavVisible}>
       <div class="main">
@@ -86,18 +121,38 @@ const Contact = ({ isNavVisible }) => {
       </div>
       <div>
         <div className="container">
-          <form className="form">
+          <form className="form" onSubmit={sendEmail}>
             <div className="descr">Contact Me</div>
             <div className="input">
-              <input autoComplete="off" type="text" required />
+              <input
+                autoComplete="off"
+                type="text"
+                required
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+              />
               <label for="name">Name</label>
             </div>
             <div className="input">
-              <input autoComplete="off" name="email" type="text" required />
+              <input
+                autoComplete="off"
+                name="email"
+                type="text"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
               <label for="email">E-mail</label>
             </div>
             <div className="input">
-              <textarea cols="30" rows="1" id="message" required></textarea>
+              <textarea
+                cols="30"
+                rows="1"
+                id="message"
+                required
+                onChange={(e) => setMsg(e.target.value)}
+                value={msg}
+              ></textarea>
               <label for="message">Message</label>
             </div>
             <div>
@@ -333,7 +388,7 @@ const MainContainer = styled.div`
     width: 120px;
     height: 120px;
     outline: none;
-    border: 4px solid blue ;
+    border: 4px solid blue;
     background: white;
     background-color: #5de4ff;
     border-radius: 120px 5px 5px 5px;
@@ -354,7 +409,7 @@ const MainContainer = styled.div`
     outline: none;
     background: white;
     background-color: #5de4ff;
-    border: 4px solid blue ;
+    border: 4px solid blue;
     border-radius: 5px 120px 5px 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -371,7 +426,7 @@ const MainContainer = styled.div`
     width: 120px;
     height: 120px;
     outline: none;
-    border: 4px solid blue ;
+    border: 4px solid blue;
     background: white;
     background-color: #5de4ff;
     border-radius: 5px 5px 5px 120px;
@@ -389,7 +444,7 @@ const MainContainer = styled.div`
     width: 120px;
     height: 120px;
     outline: none;
-    border: 4px solid blue ;
+    border: 4px solid blue;
     background: white;
     background-color: #5de4ff;
     border-radius: 5px 5px 120px 5px;
@@ -408,7 +463,7 @@ const MainContainer = styled.div`
     cursor: pointer;
     scale: 1.1;
     background-color: red;
-    border: 2px solid blue ;
+    border: 2px solid blue;
     box-shadow: 1px 1px 0px #eeb1de, 2px 2px 0px #d365b6, 3px 3px 0px #d365b6,
       4px 4px 0px #d365b6, 5px 5px 0px #d365b6;
   }

@@ -64,8 +64,8 @@ const Certificates = ({ isNavVisible }) => {
     },
   ];
   return (
-    <MainContainer isNavVisible={isNavVisible}>
-      <div className="cert-cont">
+    <MainContainer isNavVisible={isNavVisible} >
+      <div className="cert-cont"  >
         {certificates.map((certificate) => {
           return (
             <div className="card">
@@ -127,7 +127,6 @@ const MainContainer = styled.div`
     width: 70vw;
     height: 80vh;
     background: linear-gradient(135deg, #00264d, #005a99, #008cff);
-
     position: absolute;
     border-radius: 10px;
     display: flex;
