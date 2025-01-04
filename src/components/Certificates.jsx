@@ -73,7 +73,9 @@ const Certificates = ({ isNavVisible }) => {
               <div className="card__content">
                 <h3 className="card__title">{certificate.title}</h3>
                 <p className="card__description">{certificate.description}</p>
-                <button onClick={previewCertificate}>Preview</button>
+                <button onClick={previewCertificate} className="pre">
+                  Preview
+                </button>
               </div>
             </div>
           );
@@ -82,8 +84,24 @@ const Certificates = ({ isNavVisible }) => {
           className="preview"
           style={{ visibility: selectedCertificate ? "visible" : "hidden" }}
         >
-          <div style={{position:"absolute", right:"0", padding:"10px"}}>
-            <RxCross2  style={{fontSize:"25px", cursor:"pointer"}} onClick={previewCertificate}/>
+          <div style={{ position: "absolute", right: "0", padding: "10px" }}>
+            <RxCross2
+              style={{ fontSize: "25px", cursor: "pointer",color:"white" }}
+              onClick={previewCertificate}
+            />
+          </div>
+          <div className="certificate-img">
+            <img src="./gssoc.png" alt="Google Drive Image" />
+          </div>
+          <div className="desc">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              mollitia dolor quaerat at debitis sed impedit consequatur iste
+              fugiat assumenda tempore maxime eveniet aut aspernatur harum
+              recusandae unde iure modi voluptatibus voluptates, nemo vitae nam
+              sit quas! Soluta ut molestiae dolorum, voluptate alias quo totam
+              maxime sit?
+            </p>
           </div>
         </div>
       </div>
@@ -108,9 +126,36 @@ const MainContainer = styled.div`
   .preview {
     width: 70vw;
     height: 80vh;
-    background-color: #f2f2f2;
+    background: linear-gradient(135deg, #00264d, #005a99, #008cff);
+
     position: absolute;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .certificate-img {
+    width: 100%;
+    height: 80%;
+    top: 5vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    & img {
+      width: 90%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+  .desc {
+    bottom: 0;
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    margin: 8px auto;
+    margin-left: 50px;
+    color: white;
   }
   .cert-cont {
     width: 85vw;
@@ -187,5 +232,11 @@ const MainContainer = styled.div`
     font-size: 14px;
     color: #777;
     line-height: 1.4;
+  }
+
+  @media (max-width: 990px) {
+    .pre {
+      display: none;
+    }
   }
 `;
