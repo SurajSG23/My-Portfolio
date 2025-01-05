@@ -65,13 +65,14 @@ const Header = ({ setIsNavVisible }) => {
               Skills
             </p>
           </Link>
-
-          <p
-            className="hover-underline-animation center"
-            onClick={handleFirstButtonClick}
-          >
-            Projects
-          </p>
+          <Link to="/Projects" style={{ all: "unset" }}>
+            <p
+              className="hover-underline-animation center"
+              onClick={handleFirstButtonClick}
+            >
+              Projects
+            </p>
+          </Link>
           <Link to="/Certifications" style={{ all: "unset" }}>
             <p
               className="hover-underline-animation center"

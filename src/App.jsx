@@ -5,6 +5,7 @@ import Intro from "./components/Intro";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Certificates from "./components/Certificates";
+import Projects from "./components/Projects";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Skills from "./components/Skills";
@@ -25,7 +26,7 @@ function App() {
       starsContainer.appendChild(star);
     }
 
-    const shootingStarCount = 5; 
+    const shootingStarCount = 5;
     for (let i = 0; i < shootingStarCount; i++) {
       const shootingStar = document.createElement("div");
       shootingStar.classList.add("shooting-star");
@@ -40,8 +41,14 @@ function App() {
       <Header setIsNavVisible={setIsNavVisible} />
       <div className="stars-container"></div>
       <Routes>
-        <Route path="/" element={<Intro isNavVisible={isNavVisible} />} />
-        <Route path="/About" element={<About isNavVisible={isNavVisible} />} />
+        <Route 
+          path="/" 
+          element={<Intro isNavVisible={isNavVisible} />} 
+        />
+        <Route 
+          path="/About" 
+          element={<About isNavVisible={isNavVisible} />} 
+        />
         <Route
           path="/Skills"
           element={<Skills isNavVisible={isNavVisible} />}
@@ -53,6 +60,10 @@ function App() {
         <Route
           path="/Contact"
           element={<Contact isNavVisible={isNavVisible} />}
+        />
+        <Route
+          path="/Projects"
+          element={<Projects isNavVisible={isNavVisible} />}
         />
       </Routes>
     </MainContainer>
