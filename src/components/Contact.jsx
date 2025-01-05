@@ -551,6 +551,7 @@ const MainContainer = styled.div`
     }
     .container {
       width: 80vw;
+      height: 55vh;
     }
     .input,
     textarea {
