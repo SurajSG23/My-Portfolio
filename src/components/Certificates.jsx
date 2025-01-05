@@ -68,21 +68,21 @@ const Certificates = ({ isNavVisible }) => {
       title: "Chat GPT For Excel",
       id: 8,
       description:
-        "Completed the \"ChatGPT for Excel\" course from Great Learning, learning to enhance productivity and streamline workflows using AI-powered tools in Excel.",
+        'Completed the "ChatGPT for Excel" course from Great Learning, learning to enhance productivity and streamline workflows using AI-powered tools in Excel.',
       image: "Certificates/ChatGPT_Excel.png",
     },
     {
       title: "ChatGPT and AI Tools Workshop",
       id: 9,
       description:
-        "Attended the \"ChatGPT and AI Tools Workshop\" conducted by Skill Nation, gaining insights into leveraging AI tools to boost productivity and efficiency.",
+        'Attended the "ChatGPT and AI Tools Workshop" conducted by Skill Nation, gaining insights into leveraging AI tools to boost productivity and efficiency.',
       image: "Certificates/ChatGPT_SkillNation.png",
     },
     {
       title: "ChatGPT and AI Tools ",
       id: 10,
       description:
-        "Completed \"ChatGPT and AI Tools\" training by Be10x, focusing on using AI tools for enhancing workflow and problem-solving efficiency",
+        'Completed "ChatGPT and AI Tools" training by Be10x, focusing on using AI tools for enhancing workflow and problem-solving efficiency',
       image: "Certificates/ChatGPT_be10x.png",
     },
     {
@@ -336,6 +336,15 @@ const MainContainer = styled.div`
     }
     .card {
       width: 420px;
+    }
+  }
+
+  @media (max-width: 395px) {
+    .card__title {
+      font-size: 18px;
+    }
+    .card__description {
+      font-size: 13px;
     }
   }
 `;
