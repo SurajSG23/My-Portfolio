@@ -3,11 +3,16 @@ import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
 const Certificates = ({ isNavVisible }) => {
   const [selectedCertificate, setSelectedCertificate] = useState(false);
-  const previewCertificate = () => {
+  const previewCertificate = (id) => {
     setSelectedCertificate(!selectedCertificate);
+    setSrc(certificates[id - 1].image);
+    setDesc(certificates[id - 1].description);
   };
 
-  
+  const [src, setSrc] = useState("Certificates/Hackathon_Vedha.png");
+  const [desc, setDesc] = useState(
+    "VEDHA (VVCE EduTech Hackathon) was a national-level competition where our team, CODE BLOODED, ranked among the top 34 teams out of 110+ participants. Our project, SkillConnect, is a platform that enhances job readiness with an AI Interview Tool, a Learning Hub, and an automated Resume Generator."
+  );
 
   const certificates = [
     {
@@ -21,70 +26,70 @@ const Certificates = ({ isNavVisible }) => {
       title: "Internship Training Certificate",
       id: 2,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "As a Full Stack Web Development intern at IntrnForte, I developed an Open Source Job Portal and Ecommerce Product Listing, focusing on both front-end and back-end tasks. These projects helped me refine my skills in real-world applications.",
       image: "Certificates/IntrnForte_Training.png",
     },
     {
       title: "Internship Completion Certificate",
       id: 3,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "As a Full Stack Web Development intern at IntrnForte, I developed an Open Source Job Portal and Ecommerce Product Listing, focusing on both front-end and back-end tasks. These projects helped me refine my skills in real-world applications.",
       image: "Certificates/IntrnForte_Completion.png",
     },
     {
       title: "GSSoC Participation Certificate",
-      id:4,
+      id: 4,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Contributed to open-source projects during GirlScript Summer of Code, focusing on impactful code enhancements and community collaboration. Achieved a top 227 rank out of 3900+ participants, showcasing commitment and technical skills.",
       image: "Certificates/gssoc_participation.png",
     },
     {
       title: "GSSoC Achievement Certificate ",
-      id:5,
+      id: 5,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Contributed to open-source projects during GirlScript Summer of Code, focusing on impactful code enhancements and community collaboration. Achieved a top 227 rank out of 3900+ participants, showcasing commitment and technical skills.",
       image: "Certificates/gssoc_certificate.png",
     },
     {
       title: "HTML, CSS & JS Completion Certificate",
-      id:6,
+      id: 6,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Earned a Completion Certificate in HTML, CSS, and JavaScript through Udemy, mastering foundational web development skills essential for creating responsive and interactive websites..",
       image: "Certificates/Udemy_Web.png",
     },
     {
       title: "Python Completion Certificate",
-      id:7,
+      id: 7,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Earned a Completion Certificate in Python from LinkedIn Learning, gaining expertise in Python programming fundamentals and its practical applications.",
       image: "Certificates/Python_Linkedin.png",
     },
     {
       title: "Chat GPT For Excel",
-      id:8,
+      id: 8,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Completed the \"ChatGPT for Excel\" course from Great Learning, learning to enhance productivity and streamline workflows using AI-powered tools in Excel.",
       image: "Certificates/ChatGPT_Excel.png",
     },
     {
       title: "ChatGPT and AI Tools Workshop",
-      id:9,
+      id: 9,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Attended the \"ChatGPT and AI Tools Workshop\" conducted by Skill Nation, gaining insights into leveraging AI tools to boost productivity and efficiency.",
       image: "Certificates/ChatGPT_SkillNation.png",
     },
     {
       title: "ChatGPT and AI Tools ",
-      id:10,
+      id: 10,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Completed \"ChatGPT and AI Tools\" training by Be10x, focusing on using AI tools for enhancing workflow and problem-solving efficiency",
       image: "Certificates/ChatGPT_be10x.png",
     },
     {
       title: "API Student Expert Postman",
-      id:11,
+      id: 11,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Certified as an API Student Expert by Postman, demonstrating proficiency in designing, testing, and documenting APIs effectively.",
       image: "Certificates/API_StudentExpert.png",
     },
   ];
@@ -98,7 +103,10 @@ const Certificates = ({ isNavVisible }) => {
               <div className="card__content">
                 <h3 className="card__title">{certificate.title}</h3>
                 <p className="card__description">{certificate.description}</p>
-                <button onClick={previewCertificate} className="pre">
+                <button
+                  onClick={() => previewCertificate(certificate.id)}
+                  className="pre"
+                >
                   <span class="transition"></span>
                   <span class="gradient"></span>
                   <span class="label">Preview</span>
@@ -129,17 +137,10 @@ const Certificates = ({ isNavVisible }) => {
             />
           </div>
           <div className="certificate-img">
-            <img src="./gssoc.png" alt="Google Drive Image" />
+            <img src={src} alt="Google Drive Image" />
           </div>
           <div className="desc">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              mollitia dolor quaerat at debitis sed impedit consequatur iste
-              fugiat assumenda tempore maxime eveniet aut aspernatur harum
-              recusandae unde iure modi voluptatibus voluptates, nemo vitae nam
-              sit quas! Soluta ut molestiae dolorum, voluptate alias quo totam
-              maxime sit?
-            </p>
+            <p>{desc}</p>
           </div>
         </div>
       </div>
@@ -300,7 +301,7 @@ const MainContainer = styled.div`
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #27c9ff, #0067b0);
+    background: linear-gradient(135deg, #27c9ff, #00497d);
 
     transform: rotateX(-90deg);
     transform-origin: bottom;
@@ -332,6 +333,9 @@ const MainContainer = styled.div`
   @media (max-width: 990px) {
     .pre {
       display: none;
+    }
+    .card {
+      width: 420px;
     }
   }
 `;
