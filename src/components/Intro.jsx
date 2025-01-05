@@ -490,7 +490,7 @@ const MainContainer = styled.div`
     }
   }
 
-  @media (max-height:690px){
+  @media (max-height:710px){
     .texts{
       position: absolute;
       bottom: -40px;
