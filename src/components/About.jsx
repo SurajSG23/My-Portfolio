@@ -8,6 +8,29 @@ const About = ({ isNavVisible }) => {
     });
   };
 
+  const experience = [
+    {
+      title: "Full Stack Web-Developement Intern",
+      company: "IntrnForte",
+      duration: "Aug - Oct 24",
+      point1:
+        "• Developed and maintained web applications, including an open-source job portal and an e-commerce product listing system.",
+      point2:
+        "•	Gained hands-on experience with Front End Development, ReactJS, Firebase.",
+      src: "Certificates/IntrnForte_Training.png",
+    },
+    {
+      title: "Open-Source Contributor",
+      company: "Girl Script Summer of Code (GSSOC) | HacktoberFest",
+      duration: "Oct - Nov 24",
+      point1:
+        "•	Actively contributed to open-source projects, showcasing proficiency in Git, GitHub, and impactful collaboration.",
+      point2:
+        "•	Ranked in the Top 227 out of 3900+ participants, highlighting dedication and contributions to the open-source community.",
+      src: "Certificates/gssoc_participation.png",
+    },
+  ];
+
   return (
     <MainContainer isNavVisible={isNavVisible}>
       <div className="body">
@@ -90,6 +113,49 @@ const About = ({ isNavVisible }) => {
           </div>
         </div>
       </div>
+
+      <div id="education-section" className="edu">
+        <div>
+          <h2
+            style={{
+              color: "#ffffff",
+              textShadow: "1px 1px 3px rgb(0, 255, 247)"
+            }}
+            className="expp"
+          >
+            Experience
+          </h2>
+        </div>
+        <div className="aboutCards">
+          {experience.map((exp) => {
+            return (
+              <div className="aboutCard">
+                <div className="cert">
+                  <img src={exp.src} alt="" width={300} />
+                </div>
+                <div className="certInfo">
+                  <h3>{exp.title}</h3>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "30px",
+                    }}
+                  >
+                    <p>{exp.company}</p>
+                    <p>{exp.duration}</p>
+                  </div>
+                  <ul>
+                    <li>{exp.point1}</li>
+                    <li>{exp.point2}</li>
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </MainContainer>
   );
 };
@@ -150,7 +216,63 @@ const MainContainer = styled.div`
   overflow-x: hidden;
   gap: 5vh;
   scroll-behavior: smooth;
+  .aboutCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .aboutCard {
+    width: 100%;
+    height: auto;
+    min-height: 40vh;
+    background: linear-gradient(135deg, #0011ff29, #4400ff55);
+    border: 2px solid rgba(66, 79, 255, 0.595);
+    border-radius: 25px 0 25px 0;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15),
+      inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
 
+    animation: appear2 alternate;
+    animation-timeline: view();
+    animation-range: entry 0 cover 10%;
+    @keyframes appear2 {
+      from {
+        opacity: 0;
+        transform: translateX(-200px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+  .cert img {
+    border-radius: 25px 0 25px 0;
+    width: 330px;
+    min-height: 250px;
+  }
+  .certInfo {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    & h3 {
+      font-size: 25px;
+    }
+    & ul li {
+      list-style: none;
+      font-size: 14px;
+      color: #00ffff;
+    }
+    & p {
+      color: #ff8000;
+    }
+  }
   a {
     all: unset;
   }
@@ -404,6 +526,10 @@ const MainContainer = styled.div`
       cursor: pointer;
       background-color: transparent;
     }
+    .cert img {
+      width: 310px;
+    }
+
     .body {
       display: flex;
       flex-direction: column;
@@ -462,7 +588,6 @@ const MainContainer = styled.div`
           left: -7px;
           & .points-content,
           & .points-content2 {
-
             padding: 5px 0;
             h3 {
               font-size: 13px;
@@ -489,13 +614,32 @@ const MainContainer = styled.div`
       }
     }
   }
-  @media (max-height:715px){
-    .body{
+  @media (max-height: 715px) {
+    .body {
       position: absolute;
       top: 100px;
     }
     .edu {
       top: 90vh;
+    }
+    .expp{
+      margin-top: 30px
+    }
+  }
+  @media (max-width: 1129px) {
+    .aboutCard {
+      display: flex;
+      flex-direction: column;
+
+      & h3 {
+        font-size: 20px;
+      }
+      & p {
+        font-size: 12px;
+      }
+      & li {
+        font-size: 10px;
+      }
     }
   }
 `;
