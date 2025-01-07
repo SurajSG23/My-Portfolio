@@ -2,6 +2,33 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Projects = ({ isNavVisible }) => {
+  const projects = [
+    {
+      id: 1,
+      name: "My Resume AI",
+      link: "https://github.com/SurajSG23/My-Resume-AI",
+      img: "Projects/My_resume.png",
+    },
+    {
+      id: 2,
+      name: "E-Commerce Product Listing",
+      link: "https://github.com/SurajSG23/E-Commerce-Website",
+      img: "Projects/e_commerce.png",
+    },
+    {
+      id: 3,
+      name: "Dice Game",
+      link: "https://github.com/SurajSG23/Dice-Game",
+      img: "Projects/Dice_game.png",
+    },
+    {
+      id: 4,
+      name: "Todo App",
+      link: "https://github.com/SurajSG23/TodoContext",
+      img: "Projects/Todo_List.png",
+    },
+  ];
+
   return (
     <MainContainer isNavVisible={isNavVisible}>
       <div className="react">
@@ -9,34 +36,38 @@ const Projects = ({ isNavVisible }) => {
           <h2>React Projects</h2>
         </div>
         <div className="cards">
-          <div class="card">
-            <img src="./Certificates/gssoc_certificate.png" alt="" />
-            <b></b>
-            <div class="content">
-              <div class="titleContainer">
-                <div className="title">
-                  <p> Title </p>
-                </div>
-                <div className="git">
-                  <button class="button">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
-                        fill="white"
-                      ></path>
-                    </svg>
-                    <p class="text">Github</p>
-                  </button>
+          {projects.map((project) => {
+            return (
+              <div class="card">
+                <img src={project.img} alt="" />
+                <b></b>
+                <div class="content">
+                  <div class="titleContainer">
+                    <div className="title">
+                      <p>{project.name} </p>
+                    </div>
+                    <a className="git" href={project.link} target="_blank">
+                      <button class="button">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                            fill="white"
+                          ></path>
+                        </svg>
+                        <p class="text">Github</p>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
       <div className="html">
@@ -159,8 +190,11 @@ const MainContainer = styled.div`
     height: 90px;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10px 0px 10px;
-    background: linear-gradient(transparent, #1b5efb 60%);
+    padding: 30px 10px 0px 20px;
+    background: linear-gradient(transparent, #1b35fbba 60%);
+    & a {
+      all: unset;
+    }
   }
   .title,
   .git {
@@ -229,8 +263,12 @@ const MainContainer = styled.div`
         0 0 10px rgba(0, 123, 255, 0.8);
       letter-spacing: 0.5px;
     }
+    .card {
+      width: 400px;
+      min-height: 190px;
+    }
   }
-  
+
   @media (max-width: 419px) {
     .content .titleContainer {
       background: none;
