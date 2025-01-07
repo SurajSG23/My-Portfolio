@@ -119,7 +119,7 @@ const About = ({ isNavVisible }) => {
           <h2
             style={{
               color: "#ffffff",
-              textShadow: "1px 1px 3px rgb(0, 255, 247)"
+              textShadow: "1px 1px 3px rgb(0, 255, 247)",
             }}
             className="expp"
           >
@@ -131,7 +131,7 @@ const About = ({ isNavVisible }) => {
             return (
               <div className="aboutCard">
                 <div className="cert">
-                  <img src={exp.src} alt="" width={300} />
+                  <img src={exp.src} alt=""/>
                 </div>
                 <div className="certInfo">
                   <h3>{exp.title}</h3>
@@ -501,7 +501,7 @@ const MainContainer = styled.div`
             top: -6vh;
             left: 1vw;
             min-width: 30vw;
-            border-radius: 10px;
+            border-radius: 25px 0 25px 0;
             height: auto;
           }
           & .points-content2 {
@@ -603,7 +603,7 @@ const MainContainer = styled.div`
             top: -6vh;
             left: 2vw;
             min-width: 40vw;
-            border-radius: 10px;
+            border-radius: 25px 0 25px 0;
             height: auto;
           }
           & .points-content2 {
@@ -622,8 +622,8 @@ const MainContainer = styled.div`
     .edu {
       top: 90vh;
     }
-    .expp{
-      margin-top: 30px
+    .expp {
+      margin-top: 30px;
     }
   }
   @media (max-width: 1129px) {
