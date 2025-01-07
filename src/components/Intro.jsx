@@ -79,7 +79,7 @@ const Intro = ({ isNavVisible }) => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1.2em"
-                    fill="currentColor"
+                    fill="currentColor" 
                     viewBox="0 0 448 512"
                   >
                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1c-30.59 0-55.26-24.91-55.26-55.5C-1.47 21.64 23.14-3.5 53.79-3.5s55.26 25.15 55.26 55.64c.01 30.59-24.67 55.46-55.26 55.46zm394.23 339.9H355.74V312.34c0-32.33-1.16-73.93-45.09-73.93-45.13 0-52.06 35.31-52.06 71.74V448h-92.88V148.9h89.19v40.8h1.28c12.43-23.55 42.77-48.42 87.94-48.42 94.03 0 111.36 61.91 111.36 142.38V448z"></path>
@@ -490,10 +490,11 @@ const MainContainer = styled.div`
     }
   }
 
-  @media (max-height:710px){
-    .texts{
-      position: absolute;
-      bottom: -40px;
-    }
+  @media (max-height: 710px) and (max-width: 814px) {
+  .texts {
+    position: absolute;
+    bottom: -40px;
   }
+}
+
 `;

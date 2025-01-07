@@ -380,7 +380,7 @@ const MainContainer = styled.div`
             left: 1vw;
             min-width: 30vw;
             border-radius: 10px;
-            height: 12vh;
+            height: auto;
           }
           & .points-content2 {
             left: -31vw;
