@@ -10,7 +10,7 @@ const About = ({ isNavVisible }) => {
 
   const experience = [
     {
-      title: "Full Stack Web Developement Intern",
+      title: "Full Stack Web Development Intern",
       company: "IntrnForte",
       duration: "Aug - Oct 24",
       point1:
