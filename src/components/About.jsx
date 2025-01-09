@@ -50,14 +50,7 @@ const About = ({ isNavVisible }) => {
           </div>
           <div className="about">
             <p>
-              As a diligent student at Sri Jayachamarajendra College Of
-              Engineering, my academic journey is set to culminate in 2026.
-              Harnessing a robust foundation in science from Sadvidya Composite
-              PU College, I've honed my competencies in web development, an
-              essential skill in today's digital world. This hands-on approach
-              ensures that upon graduation, I will not only possess a strong
-              theoretical background but also practical skills that are
-              immediately applicable in the tech industry.
+            Hi, I'm Suraj, a computer science student at <b>SJCE</b> College with a strong foundation in <b>science</b> from my pre-university education. My passion lies in front-end and data analysis, which I’ve honed through internships, including a Full Stack Web Development Internship and a Data Analyst Internship. I actively participate in tech events like Hacktoberfest and GSSoC, continuously growing as a developer.
             </p>
           </div>
         </div>
