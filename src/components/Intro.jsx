@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import styled from "styled-components";
 const Intro = ({ isNavVisible }) => {
@@ -79,7 +80,7 @@ const Intro = ({ isNavVisible }) => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1.2em"
-                    fill="currentColor" 
+                    fill="currentColor"
                     viewBox="0 0 448 512"
                   >
                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1c-30.59 0-55.26-24.91-55.26-55.5C-1.47 21.64 23.14-3.5 53.79-3.5s55.26 25.15 55.26 55.64c.01 30.59-24.67 55.46-55.26 55.46zm394.23 339.9H355.74V312.34c0-32.33-1.16-73.93-45.09-73.93-45.13 0-52.06 35.31-52.06 71.74V448h-92.88V148.9h89.19v40.8h1.28c12.43-23.55 42.77-48.42 87.94-48.42 94.03 0 111.36 61.91 111.36 142.38V448z"></path>
@@ -101,24 +102,13 @@ const Intro = ({ isNavVisible }) => {
                 </li>
               </a>
             </ul>
-            <a href="#">
+            <Link to="/About">
               <button className="Download-button">
-                <svg
-                  viewBox="0 0 640 512"
-                  width="20"
-                  height="16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill="white"
-                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z"
-                  ></path>
-                </svg>
-                <span style={{ fontSize: "15px", fontWeight: "bold" }}>
-                  View Resume
-                </span>
+                <div>
+                  <p>About Me</p>
+                </div>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -294,9 +284,12 @@ const MainContainer = styled.div`
     align-items: center;
     font-family: inherit;
     font-weight: 500;
-    font-size: 17px;
-    padding: 12px 20px;
+    font-size: 19px;
+    width: 130px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(
       144deg,
       rgb(186, 66, 255),
@@ -311,12 +304,8 @@ const MainContainer = styled.div`
     position: relative;
     transition: all 0.2s;
     height: 50px;
+    margin-top: 10px;
     animation: move-right-left 0.5s linear;
-  }
-
-  .Download-button svg {
-    margin-right: 8px;
-    width: 35px;
   }
 
   .Download-button:hover {
@@ -467,7 +456,7 @@ const MainContainer = styled.div`
     }
     .Download-button {
       height: 50px;
-      width: 200px;
+      width: 130px;
     }
 
     .Download-button svg {
@@ -491,10 +480,9 @@ const MainContainer = styled.div`
   }
 
   @media (max-height: 710px) and (max-width: 814px) {
-  .texts {
-    position: absolute;
-    bottom: -40px;
+    .texts {
+      position: absolute;
+      bottom: -40px;
+    }
   }
-}
-
 `;
