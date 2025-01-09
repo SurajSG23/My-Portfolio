@@ -10,7 +10,7 @@ const About = ({ isNavVisible }) => {
 
   const experience = [
     {
-      title: "Full Stack Web-Developement Intern",
+      title: "Full Stack Web Developement Intern",
       company: "IntrnForte",
       duration: "Aug - Oct 24",
       point1:
@@ -20,8 +20,18 @@ const About = ({ isNavVisible }) => {
       src: "Certificates/IntrnForte_Training.png",
     },
     {
+      title: "Data Analyst Intern",
+      company: "Unified Mentor",
+      duration: "Nov - Jan 25",
+      point1:
+        "• Proficient in Python and Tableau for data analysis and visualization",
+      point2:
+        "• Analyzed OCD patient dataset focusing on demographics and clinical data and also Netflix data cleaning and analysis, and Supermart Grocery sales retail analytics",
+      src: "Certificates/UM_Certificate.jpg",
+    },
+    {
       title: "Open-Source Contributor",
-      company: "Girl Script Summer of Code (GSSOC) | HacktoberFest",
+      company: "Girl Script Summer of Code (GSSoC) | HacktoberFest",
       duration: "Oct - Nov 24",
       point1:
         "•	Actively contributed to open-source projects, showcasing proficiency in Git, GitHub, and impactful collaboration.",

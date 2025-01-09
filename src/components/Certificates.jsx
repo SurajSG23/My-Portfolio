@@ -37,57 +37,64 @@ const Certificates = ({ isNavVisible }) => {
       image: "Certificates/IntrnForte_Completion.png",
     },
     {
-      title: "GSSoC Participation Certificate",
+      title: "Data Analysis Internship Certificate",
       id: 4,
+      description:
+        "As a Data Analyst Intern at Unified Mentor, I used Python and Tableau for data cleaning, analysis, and visualization. Projects included OCD patient data, Netflix data, and Supermart grocery sales analytics.",
+      image: "Certificates/UM_Certificate.jpg",
+    },
+    {
+      title: "GSSoC Participation Certificate",
+      id: 5,
       description:
         "Contributed to open-source projects during GirlScript Summer of Code, focusing on impactful code enhancements and community collaboration. Achieved a top 227 rank out of 3900+ participants, showcasing commitment and technical skills.",
       image: "Certificates/gssoc_participation.png",
     },
     {
       title: "GSSoC Achievement Certificate ",
-      id: 5,
+      id: 6,
       description:
         "Contributed to open-source projects during GirlScript Summer of Code, focusing on impactful code enhancements and community collaboration. Achieved a top 227 rank out of 3900+ participants, showcasing commitment and technical skills.",
       image: "Certificates/gssoc_certificate.png",
     },
     {
       title: "HTML, CSS & JS Completion Certificate",
-      id: 6,
+      id: 7,
       description:
         "Earned a Completion Certificate in HTML, CSS, and JavaScript through Udemy, mastering foundational web development skills essential for creating responsive and interactive websites..",
       image: "Certificates/Udemy_Web.png",
     },
     {
       title: "Python Completion Certificate",
-      id: 7,
+      id: 8,
       description:
         "Earned a Completion Certificate in Python from LinkedIn Learning, gaining expertise in Python programming fundamentals and its practical applications.",
       image: "Certificates/Python_Linkedin.png",
     },
     {
       title: "Chat GPT For Excel",
-      id: 8,
+      id: 9,
       description:
         'Completed the "ChatGPT for Excel" course from Great Learning, learning to enhance productivity and streamline workflows using AI-powered tools in Excel.',
       image: "Certificates/ChatGPT_Excel.png",
     },
     {
       title: "ChatGPT and AI Tools Workshop",
-      id: 9,
+      id: 10,
       description:
         'Attended the "ChatGPT and AI Tools Workshop" conducted by Skill Nation, gaining insights into leveraging AI tools to boost productivity and efficiency.',
       image: "Certificates/ChatGPT_SkillNation.png",
     },
     {
       title: "ChatGPT and AI Tools ",
-      id: 10,
+      id: 11,
       description:
         'Completed "ChatGPT and AI Tools" training by Be10x, focusing on using AI tools for enhancing workflow and problem-solving efficiency',
       image: "Certificates/ChatGPT_be10x.png",
     },
     {
       title: "API Student Expert Postman",
-      id: 11,
+      id: 12,
       description:
         "Certified as an API Student Expert by Postman, demonstrating proficiency in designing, testing, and documenting APIs effectively.",
       image: "Certificates/API_StudentExpert.png",
@@ -137,7 +144,7 @@ const Certificates = ({ isNavVisible }) => {
             />
           </div>
           <div className="certificate-img">
-            <img src={src} alt="Google Drive Image" />
+            <img src={src} alt="Certificate" />
           </div>
           <div className="desc">
             <p>{desc}</p>
