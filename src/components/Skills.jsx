@@ -17,7 +17,7 @@ const Skills = ({ isNavVisible }) => {
             </div>
             <div>C</div>
           </div>
-          <div className="container">
+          {/* <div className="container">
             <div>
               <img
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
@@ -25,7 +25,7 @@ const Skills = ({ isNavVisible }) => {
               />
             </div>
             <div>C++</div>
-          </div>
+          </div> */}
           <div className="container">
             <div>
               <img
@@ -104,6 +104,58 @@ const Skills = ({ isNavVisible }) => {
               />
             </div>
             <div>Tailwind</div>
+          </div>
+        </div>
+      </div>
+      <div className="items">
+        <div>
+          <h2>Others</h2>
+        </div>
+        <div className="langs">
+          <div className="container">
+            <div>
+              <img
+                src="https://img.icons8.com/color/200/tableau-software.png"
+                alt="Tableau"
+              />
+            </div>
+            <div>Tableau</div>
+          </div>
+          <div className="container">
+            <div>
+              <img
+                src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                alt="GIT"
+              />
+            </div>
+            <div>Git</div>
+          </div>
+          <div className="container">
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                alt="Github"
+              />
+            </div>
+            <div>Github</div>
+          </div>
+          <div className="container">
+            <div>
+              <img
+                src="https://www.svgrepo.com/show/353735/firebase.svg"
+                alt="FireBase"
+              />
+            </div>
+            <div>FireBase</div>
+          </div>
+          <div className="container">
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg"
+                alt="Excel"
+              />
+            </div>
+            <div>Excel</div>
           </div>
         </div>
       </div>

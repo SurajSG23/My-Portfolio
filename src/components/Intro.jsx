@@ -5,12 +5,14 @@ import styled from "styled-components";
 const Intro = ({ isNavVisible }) => {
   const [text] = useTypewriter({
     words: [
-      "FrontEnd Development",
-      "DSA in Java",
-      "SEO",
-      "MS excel",
+      "HTML, CSS & JS",
+      "ReactJS",
+      "Tailwind",
+      "Git & Github",
+      "Data Analysis",
+      "DSA in Java & C",
+      "Excel",
       "FireBase",
-      "DSA in C",
     ],
     loop: true,
     typeSpeed: 100,
