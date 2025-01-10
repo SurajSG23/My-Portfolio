@@ -50,7 +50,13 @@ const About = ({ isNavVisible }) => {
           </div>
           <div className="about">
             <p>
-            Hi, I'm Suraj, a computer science student at <b>SJCE</b> College with a strong foundation in <b>science</b> from my pre-university education. My passion lies in front-end and data analysis, which I’ve honed through internships, including a Full Stack Web Development Internship and a Data Analyst Internship. I actively participate in tech events like Hacktoberfest and GSSoC, continuously growing as a developer.
+              Hi, I'm Suraj, a computer science student at <b>SJCE</b> College
+              with a strong foundation in <b>science</b> from my pre-university
+              education. My passion lies in front-end and data analysis, which
+              I’ve honed through internships, including a Full Stack Web
+              Development Internship and a Data Analyst Internship. I actively
+              participate in tech events like Hacktoberfest and GSSoC,
+              continuously growing as a developer.
             </p>
           </div>
         </div>
@@ -134,7 +140,7 @@ const About = ({ isNavVisible }) => {
             return (
               <div className="aboutCard">
                 <div className="cert">
-                  <img src={exp.src} alt=""/>
+                  <img src={exp.src} alt="" />
                 </div>
                 <div className="certInfo">
                   <h3>{exp.title}</h3>
@@ -627,6 +633,13 @@ const MainContainer = styled.div`
     }
     .expp {
       margin-top: 30px;
+    }
+  }
+  @media (max-width: 375px) {
+    .cert img {
+      border-radius: 25px 0 25px 0;
+      width: 280px;
+      min-height: 200px;
     }
   }
   @media (max-width: 1129px) {
