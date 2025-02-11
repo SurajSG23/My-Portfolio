@@ -38,6 +38,11 @@ const Projects = ({ isNavVisible }) => {
       link: "https://github.com/SurajSG23/FireBase-Contact-App",
       img: "Projects/FireBase_Contact.png",
     },
+    {
+      name: "Skill Connect-Landing Page",
+      link: "https://github.com/SurajSG23/landing-page-SC",
+      img: "Projects/Skill_Connect.jpg",
+    },
   ];
 
   const HTML_projects = [
@@ -71,11 +76,7 @@ const Projects = ({ isNavVisible }) => {
       link: "https://github.com/SurajSG23/Amazon-Clone",
       img: "Projects/Amazon_Clone.png",
     },
-    {
-      name: "Skill Connect-Landing Page",
-      link: "https://github.com/SurajSG23/landing-page-SC",
-      img: "Projects/Skill_Connect.jpg",
-    },
+    
   ];
   return (
     <MainContainer isNavVisible={isNavVisible}>
