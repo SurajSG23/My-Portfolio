@@ -4,92 +4,84 @@ import styled from "styled-components";
 const Projects = ({ isNavVisible }) => {
   const React_projects = [
     {
-      id: 1,
       name: "My Resume AI",
       link: "https://github.com/SurajSG23/My-Resume-AI",
       img: "Projects/My_resume.png",
     },
     {
-      id: 2,
+      name: "Reportify AI",
+      link: "https://github.com/SurajSG23/reportify/",
+      img: "Projects/Reportify.png",
+    },
+    {
       name: "E-Commerce Product Listing",
       link: "https://github.com/SurajSG23/E-Commerce-Website",
       img: "Projects/e_commerce.png",
     },
     {
-      id: 3,
       name: "Dice Game",
       link: "https://github.com/SurajSG23/Dice-Game",
       img: "Projects/Dice_game.png",
     },
     {
-      id: 4,
       name: "Todo App",
       link: "https://github.com/SurajSG23/TodoContext",
       img: "Projects/Todo_List.png",
     },
     {
-      id: 5,
       name: "Makerble Homepage",
       link: "https://github.com/SurajSG23/Makerble-HomePage",
       img: "Projects/Makerble_homepage.png",
     },
     {
-      id: 6,
       name: "Contact App-Firebase",
       link: "https://github.com/SurajSG23/FireBase-Contact-App",
       img: "Projects/FireBase_Contact.png",
     },
   ];
 
-  const HTML_projects=[
+  const HTML_projects = [
     {
-      id: 1,
       name: "Job Portal",
       link: "https://github.com/SurajSG23/Job-Portal",
       img: "Projects/Job_Portal.png",
     },
     {
-      id: 2,
       name: "Spotify Clone",
       link: "https://github.com/SurajSG23/Spotify-Clone",
       img: "Projects/Spotify_Clone.png",
     },
     {
-      id: 3,
       name: "Roshambo Game",
       link: "https://github.com/SurajSG23/Rock_Paper_Scissors",
       img: "Projects/Roshambo.png",
     },
     {
-      id: 4,
       name: "Super Mario Game",
       link: "https://github.com/SurajSG23/Super-Mario-Game",
       img: "Projects/Super_Mario.png",
     },
     {
-      id: 5,
       name: "Netflix Clone",
       link: "https://github.com/SurajSG23/Netflix-Clone",
       img: "Projects/Netflix_Clone.png",
     },
     {
-      id: 6,
       name: "Amazon Clone",
       link: "https://github.com/SurajSG23/Amazon-Clone",
       img: "Projects/Amazon_Clone.png",
     },
     {
-      id: 7,
       name: "Skill Connect-Landing Page",
       link: "https://github.com/SurajSG23/landing-page-SC",
       img: "Projects/Skill_Connect.jpg",
     },
-  ]
+  ];
   return (
     <MainContainer isNavVisible={isNavVisible}>
       <div className="react">
         <div>
-          <h2>React Projects</h2>
+          <h1>React Projects</h1>
         </div>
         <div className="cards">
           {React_projects.map((project) => {
@@ -127,12 +119,12 @@ const Projects = ({ isNavVisible }) => {
         </div>
       </div>
       <div className="html">
-        <div>
+        <div style={{marginTop:"30px"}}>
           {" "}
-          <h2>HTML, CSS & JS Projects</h2>
+          <h1>HTML, CSS & JS Projects</h1>
         </div>
         <div className="cards">
-        {HTML_projects.map((project) => {
+          {HTML_projects.map((project) => {
             return (
               <div class="card">
                 <img src={project.img} alt="" />
@@ -201,7 +193,6 @@ const MainContainer = styled.div`
     align-items: center;
     padding: 20px;
   }
-
   .cards {
     padding-top: 10px;
     width: 95%;
@@ -280,7 +271,7 @@ const MainContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 30px 10px 0px 20px;
-    border-radius: 0 30px ;
+    border-radius: 0 30px;
     background: linear-gradient(transparent, #1b35fbba 60%);
     & a {
       all: unset;
@@ -349,8 +340,8 @@ const MainContainer = styled.div`
       font-family: "Inter", sans-serif;
       font-weight: 900;
       color: white;
-      text-shadow: 2px 4px 8px rgba(0, 22, 45, 0.6),
-        0 0 10px rgba(0, 0, 0, 0.8),0 0 10px rgba(0, 0, 0, 0.8),0 0 10px rgba(0, 0, 0, 0.8);
+      text-shadow: 2px 4px 8px rgba(0, 22, 45, 0.6), 0 0 10px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
       letter-spacing: 0.5px;
     }
     .card {
