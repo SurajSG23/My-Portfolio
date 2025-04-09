@@ -1,8 +1,14 @@
+/*eslint-disable */
 import React, { useState } from "react";
 import styled from "styled-components";
 
 const Projects = ({ isNavVisible }) => {
   const React_projects = [
+    {
+      name: "PrepBuddy",
+      link: "https://github.com/SurajSG23/PrepBuddy",
+      img: "Projects/PrepBuddy.png",
+    },
     {
       name: "My Resume AI",
       link: "https://github.com/SurajSG23/My-Resume-AI",
@@ -76,7 +82,6 @@ const Projects = ({ isNavVisible }) => {
       link: "https://github.com/SurajSG23/Amazon-Clone",
       img: "Projects/Amazon_Clone.png",
     },
-    
   ];
   return (
     <MainContainer isNavVisible={isNavVisible}>
@@ -120,7 +125,7 @@ const Projects = ({ isNavVisible }) => {
         </div>
       </div>
       <div className="html">
-        <div style={{marginTop:"30px"}}>
+        <div style={{ marginTop: "30px" }}>
           {" "}
           <h1>HTML, CSS & JS Projects</h1>
         </div>
