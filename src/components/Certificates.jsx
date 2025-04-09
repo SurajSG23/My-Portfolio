@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
@@ -320,6 +321,7 @@ const MainContainer = styled.div`
   }
 
   .card__title {
+    text-align: center;
     margin: 0;
     font-size: 24px;
     color: #333;
