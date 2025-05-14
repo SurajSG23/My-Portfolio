@@ -10,6 +10,16 @@ const About = ({ isNavVisible }) => {
   };
 
   const experience = [
+    // {
+    //   title: "Intern",
+    //   company: "Deloitte",
+    //   duration: "May 5 - Present, 2025",
+    //   point1:
+    //     "• Working as an intern, gaining hands-on experience in real-world business and technology projects.",
+    //   point2:
+    //     "• Contributed to various tasks and projects, learning from industry professionals and enhancing problem-solving skills.",
+    //   src: "Certificates/deloitte_internship.png",
+    // },
     {
       title: "Full Stack Web Development Intern",
       company: "IntrnForte",

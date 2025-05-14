@@ -321,7 +321,7 @@ const MainContainer = styled.div`
   }
 
   .card__title {
-    text-align: center;
+    text-align: center  ;
     margin: 0;
     font-size: 24px;
     color: #333;
