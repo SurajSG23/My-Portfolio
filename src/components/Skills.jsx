@@ -64,13 +64,13 @@ const skillsData = [
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
       },
       {
-        name: "Node.js",
-        icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-      },
-      {
         name: "React",
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
       },
+      {
+        name: "Node.js",
+        icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+      }
     ],
   },
   {
@@ -142,6 +142,7 @@ const MainContainer = styled.div`
   z-index: ${({ isNavVisible }) => (isNavVisible ? "-1" : "1")};
   color: #baf4ff;
   align-items: center;
+  
   .items {
     display: flex;
     flex-direction: column;
