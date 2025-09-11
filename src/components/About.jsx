@@ -10,35 +10,15 @@ const About = ({ isNavVisible }) => {
   };
 
   const experience = [
-    // {
-    //   title: "Intern",
-    //   company: "Deloitte",
-    //   duration: "May 5 - Present, 2025",
-    //   point1:
-    //     "• Working as an intern, gaining hands-on experience in real-world business and technology projects.",
-    //   point2:
-    //     "• Contributed to various tasks and projects, learning from industry professionals and enhancing problem-solving skills.",
-    //   src: "Certificates/deloitte_internship.png",
-    // },
     {
       title: "Full Stack Web Development Intern",
-      company: "IntrnForte",
-      duration: "Aug - Oct 24",
+      company: "Deloitte",
+      duration: "May - July 25",
       point1:
-        "• Developed and maintained web applications, including an open-source job portal and an e-commerce product listing system.",
+        "• Built a plug-and-play React component with a FastAPI backend that adds RAG-powered conversational AI to any website.",
       point2:
-        "•	Gained hands-on experience with Front End Development, ReactJS, Firebase.",
-      src: "Certificates/IntrnForte_Training.png",
-    },
-    {
-      title: "Data Analyst Intern",
-      company: "Unified Mentor",
-      duration: "Nov - Jan 25",
-      point1:
-        "• Proficient in Python and Tableau for data analysis and visualization",
-      point2:
-        "• Analyzed OCD patient dataset focusing on demographics and clinical data and also Netflix data cleaning and analysis, and Supermart Grocery sales retail analytics",
-      src: "Certificates/UM_Certificate.jpg",
+        "• Supports document uploads, voice input, and seamless integration for docs, customer support, and knowledge bases.",
+      src: "Certificates/Deloitte.jpg",
     },
     {
       title: "Open-Source Contributor",
@@ -49,6 +29,26 @@ const About = ({ isNavVisible }) => {
       point2:
         "•	Ranked in the Top 227 out of 3900+ participants, highlighting dedication and contributions to the open-source community.",
       src: "Certificates/gssoc_participation.png",
+    },
+    {
+      title: "Data Analyst Trainee",
+      company: "Unified Mentor",
+      duration: "Nov - Jan 25",
+      point1:
+        "• Proficient in Python and Tableau for data analysis and visualization",
+      point2:
+        "• Analyzed OCD patient dataset focusing on demographics and clinical data and also Netflix data cleaning and analysis, and Supermart Grocery sales retail analytics",
+      src: "Certificates/UM_Certificate.jpg",
+    },
+    {
+      title: "Full Stack Web Development Trainee",
+      company: "IntrnForte",
+      duration: "Aug - Oct 24",
+      point1:
+        "• Developed and maintained web applications, including an open-source job portal and an e-commerce product listing system.",
+      point2:
+        "•	Gained hands-on experience with Front End Development, ReactJS, Firebase.",
+      src: "Certificates/IntrnForte_Training.png",
     },
   ];
 
