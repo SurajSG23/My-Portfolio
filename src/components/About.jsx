@@ -61,13 +61,10 @@ const About = ({ isNavVisible }) => {
           </div>
           <div className="about">
             <p>
-              Hi, I'm Suraj, a computer science student at <b>SJCE</b> College
-              with a strong foundation in <b>science</b> from my pre-university
-              education. My passion lies in front-end and data analysis, which
-              I’ve honed through internships, including a Full Stack Web
-              Development Internship and a Data Analyst Internship. I actively
-              participate in tech events like Hacktoberfest and GSSoC,
-              continuously growing as a developer.
+              Hi, I’m a computer science student at SJCE College with a strong foundation in science from my pre-university education.
+              I’m passionate about MERN stack development and data analysis, which I’ve explored through internships in Full Stack
+              Web Development, Data Analysis, and at Deloitte. I also actively participate in open source contribution tech events
+              like Hacktoberfest and GSSoC.
             </p>
           </div>
         </div>
